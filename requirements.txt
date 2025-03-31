@@ -1,2 +1,3 @@
 dbt-core==1.9.3
 dbt-bigquery==1.9.1
+dbt-osmosis==1.1.13

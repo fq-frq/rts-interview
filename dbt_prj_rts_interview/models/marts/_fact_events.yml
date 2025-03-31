@@ -1,0 +1,64 @@
+version: 2
+models:
+  - name: fact_events
+    columns:
+      - name: event_id
+        data_type: STRING
+      - name: event_timestamp
+        data_type: TIMESTAMP
+      - name: session_id
+        description: A unique identifier for the user's session.
+        data_type: STRING
+      - name: user_id
+        description: An anonymized identifier for the user.
+        data_type: STRING
+      - name: profile_id
+        description: An identifier for the user profile.
+        data_type: STRING
+      - name: device_id
+        data_type: STRING
+      - name: device_type
+        data_type: STRING
+      - name: user_agent
+        description: The user agent string of the device/browser.
+        data_type: STRING
+      - name: country_code
+        data_type: STRING
+      - name: region_code
+        data_type: STRING
+      - name: city
+        data_type: STRING
+      - name: page_id
+        description: A unique identifier for the page.
+        data_type: STRING
+      - name: page_type
+        data_type: STRING
+      - name: navigation_path
+        data_type: STRING
+      - name: content_id
+        description: A unique identifier for the content.
+        data_type: STRING
+      - name: content_category
+        data_type: STRING
+      - name: content_title
+        description: The title of the content.
+        data_type: STRING
+      - name: media_id
+        data_type: STRING
+      - name: media_channel
+        description: The media channel broadcasting the content.
+        data_type: STRING
+      - name: media_is_livestream
+        description: Indicates if the media is a live stream.
+        data_type: STRING
+      - name: media_duration
+        data_type: STRING
+      - name: media_watched_duration
+        data_type: STRING
+      - name: event_type
+        data_type: STRING
+      - name: referrer_url
+        data_type: STRING
+      - name: is_bot
+        description: Indicates if the user is a bot.
+        data_type: BOOLEAN

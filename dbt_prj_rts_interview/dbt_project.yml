@@ -22,15 +22,17 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
 
+vars:
+  dbt-osmosis:
+    sources:
+      dts_rts_interview:
+        path: "staging/_extract_udp_srf__sources.yml"
+        dataset: "dts_rts_interview"
 
-# Configuring models
-# Full documentation: https://docs.getdbt.com/docs/configuring-models
-
-# In this example config, we tell dbt to build all models in the example/
-# directory as views. These settings can be overridden in the individual model
-# files using the `{{ config(...) }}` macro.
 models:
   dbt_prj_rts_interview:
-    # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: view
+    +dbt-osmosis: "_{model}.yml"   # Default for entire project
+    +persist_docs:
+      relation: true
+      columns: true
+    +materialized: view

@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: dts_rts_interview
+    project: prj-faiqabahra-rts-interview  
+    dataset: dts_rts_interview  
+    tables:
+      - name: e_extract_udp_srf

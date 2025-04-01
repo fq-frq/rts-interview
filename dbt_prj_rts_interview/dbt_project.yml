@@ -36,3 +36,9 @@ models:
       relation: true
       columns: true
     +materialized: view
+    staging:
+      dataset: stg
+    intermediate:
+      dataset: int
+    marts:
+      dataset: mrt

@@ -1,0 +1,10 @@
+version: 2
+models:
+  - name: dim_locations
+    columns:
+      - name: country_code
+        data_type: STRING
+      - name: region_code
+        data_type: STRING
+      - name: city
+        data_type: STRING

@@ -1,0 +1,8 @@
+version: 2
+
+seeds:
+  - name: country_codes
+    config:
+      quote_columns: false
+      column_types: {name: string, code: string}
+      delimiter: ","

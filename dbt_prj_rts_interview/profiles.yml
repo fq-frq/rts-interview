@@ -4,7 +4,7 @@ dbt_prj_rts_interview:
       dataset: dts_rts_interview
       job_execution_timeout_seconds: 300
       job_retries: 1
-      keyfile: C:\Users\ffarooq\repos\rts-interview\service_account_key.json
+      keyfile: C:\Users\ffarooq\repos\rts-interview\service_account_key.json   #Replace with your json service account key full path
       location: europe-west9
       method: service-account
       priority: interactive

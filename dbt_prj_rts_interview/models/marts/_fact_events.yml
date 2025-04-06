@@ -22,6 +22,9 @@ models:
       - name: event_arrival_time_cet
         description: The exact timestamp when the event was received in CET timezone.
         data_type: TIMESTAMP
+      - name: hour_of_day
+        description: the hour of the event_arrival_time_cet
+        data_type: INT64
       - name: session_id
         description: A unique identifier for the user's session.
         data_type: STRING

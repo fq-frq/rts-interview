@@ -38,6 +38,7 @@ foreign_keys_calculate AS (
         event_type,
         cookie_id,                                          
         event_arrival_time_cet,
+        EXTRACT(HOUR FROM event_arrival_time_cet) as hour_of_day, 
         session_id,
         event_id,
         url,

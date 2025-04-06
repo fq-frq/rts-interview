@@ -110,8 +110,10 @@ Power BI automatically detected relationships based on foreign keys due to the c
 - Total of sessions
 - World map with visualization of number of sessions in every country
 - Top 3 of content type
+![RTS_overview_of_events_data](images/RTS_overview_of_events_data.png)
 
 #### 2. Behavior in Switzerland
 - Average duration of a session (did not manage to make it work in the given time, it does not change when we apply filters)
 - Histogram giving the number of sessions in Switzerland for each hour of the day (extracted from the event_arrival_time_cet)
 - Donut chart with the languages
+![Behavior_in_Switzerland](images/Behavior_in_Switzerland.png)

@@ -101,7 +101,7 @@ Power BI was used in import mode to add `pbi_rts_interview.pbix` in the reposito
 
 ### Relations
 Power BI automatically detected relationships based on foreign keys due to the clean star schema structure.
-![datamodel](images\data model.png)
+![data model](images/data model.png)
 
 ### Key Insights & Visuals
 

@@ -46,3 +46,4 @@ models:
 seeds:
   dbt_prj_rts_interview:
     +dbt-osmosis: "_{model}.yml"
+    dataset: ref

@@ -2,6 +2,7 @@ snapshots:
   - name: contents_snapshot
     relation: ref('dim_contents')
     description: scd2 for dim_contents
+    dataset: mrt
     config:
       strategy: timestamp
       unique_key: content_id

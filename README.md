@@ -14,7 +14,7 @@ Key components:
 ## 🚀 How to Run This Project
 
 ### If you just want to visualize Power BI dashoboards:
-Open `pbi_rts_interview.pbix`usnig Power BI desktop.
+Open `pbi_rts_interview.pbix`using Power BI desktop.
 
 ### If your want to run it from scratch:
 #### 1. Clone the Repository
@@ -31,7 +31,7 @@ Upload the raw CSV (`extract udp srf.csv`) to a GCS bucket, e.g., `bkt_yourname_
 Create a BigQuery dataset `dts_rts_interview` in region `europe-west9`  
 Create an external table in BigQuery using the provided `create_external_table.sql` script  
 #### 4. Configure dbt Profile  
-Create your service account key and save the JSON file at the root of the repository as `service_account_key.json`  
+Create your service account and generate the key as a JSON file and save it at the root of the repository as `service_account_key.json`  
 Update `dbt_prj_rts_interview/profiles.yml` file specifying your JSON file full path and your project name.  
 #### 5. Run the dbt Project  
 ```bash
@@ -77,7 +77,7 @@ For each final dimension and fact table, I created an intermediate model to:
 ### ⭐ Final Star Schema
 - `fact_events`: One event per row, representing a user click or interaction. Excludes dimension attributes already modeled elsewhere.
 - `dim_contents`: Unique contents defined by page type and title. Includes a generated content_modification_datetime which canis usefull for tracking changes.
-- `dim_languages`: Enriched via dbt seeds using country and language code CSVs sourced externally.
+- `dim_languages`: Enriched via dbt seeds using country and language code CSVs sourced externally (from datahub.io).
 - `dim_locations`: Based on country, region, and city — derived from user context.
 - `dim_sessions`: Session-level data including:
     - session_duration_seconds
@@ -101,6 +101,7 @@ Power BI was used in import mode to add `pbi_rts_interview.pbix` in the reposito
 
 ### Relations
 Power BI automatically detected relationships based on foreign keys due to the clean star schema structure.  
+  
 ![data_model](images/data_model.png)
 
 ### Key Insights & Visuals
@@ -110,10 +111,12 @@ Power BI automatically detected relationships based on foreign keys due to the c
 - Total of sessions
 - World map with visualization of number of sessions in every country
 - Top 3 of content type
+  
 ![RTS_overview_of_events_data](images/RTS_overview_of_events_data.png)
 
 #### 2. Behavior in Switzerland
 - Average duration of a session (did not manage to make it work in the given time, it does not change when we apply filters)
 - Histogram giving the number of sessions in Switzerland for each hour of the day (extracted from the event_arrival_time_cet)
 - Donut chart with the languages
+  
 ![Behavior_in_Switzerland](images/Behavior_in_Switzerland.png)

@@ -1,9 +1,16 @@
 version: 2
 models:
   - name: dim_locations
+    config:
+      contract:
+        enforced: true
     columns:
       - name: location_id
         data_type: STRING
+        constraints:
+          - type: not_null
+        tests:
+          - unique
       - name: country_code
         data_type: STRING
       - name: region_code

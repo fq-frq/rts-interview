@@ -1,6 +1,9 @@
 version: 2
 models:
   - name: fact_events
+    config:
+      contract:
+        enforced: true
     columns:
       - name: business_unit
         description: The business unit responsible for the event (e.g., 'rts').
@@ -22,9 +25,13 @@ models:
       - name: session_id
         description: A unique identifier for the user's session.
         data_type: STRING
-      - name: full_row_md5
+      - name: event_id
         description: A hash representing the full row for data integrity checks.
         data_type: STRING
+        constraints:
+          - type: not_null
+        tests:
+          - unique
       - name: url
         description: The full URL of the page where the event took place.
         data_type: STRING

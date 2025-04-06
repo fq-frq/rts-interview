@@ -1,10 +1,17 @@
 version: 2
 models:
   - name: dim_sessions
+    config:
+      contract:
+        enforced: true
     columns:
       - name: session_id
         description: A unique identifier for the user's session.
         data_type: STRING
+        constraints:
+          - type: not_null
+        tests:
+          - unique
       - name: session_start_time
         data_type: TIMESTAMP
       - name: session_end_time

@@ -1,10 +1,17 @@
 version: 2
 models:
   - name: dim_contents
+    config:
+      contract:
+        enforced: true
     columns:
       - name: content_id
         description: A unique identifier for the content.
         data_type: STRING
+        constraints:
+          - type: not_null
+        tests:
+          - unique
       - name: content_title
         description: The title of the content.
         data_type: STRING

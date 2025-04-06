@@ -8,7 +8,7 @@ select
     TIMESTAMP(EVENT_ARRIVAL_TIME_CET) AS event_arrival_time_cet,
     SESSION_ID AS session_id,
     CAST(SESSION_RANK AS INTEGER) AS session_rank,
-    FULL_ROW_MD5 AS full_row_md5,
+    FULL_ROW_MD5 AS event_id,
     ITEM_URN AS item_urn,
     PAGE_URN AS page_urn,
     URL AS url,

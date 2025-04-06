@@ -1,9 +1,16 @@
 version: 2
 models:
   - name: dim_languages
+    config:
+      contract:
+        enforced: true
     columns:
       - name: language_id
         data_type: STRING
+        constraints:
+          - type: not_null
+        tests:
+          - unique
       - name: language
         description: The language settings of the user's device.
         data_type: STRING

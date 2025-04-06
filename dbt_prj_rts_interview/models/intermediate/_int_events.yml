@@ -1,6 +1,6 @@
 version: 2
 models:
-  - name: fact_events
+  - name: int_events
     columns:
       - name: business_unit
         description: The business unit responsible for the event (e.g., 'rts').

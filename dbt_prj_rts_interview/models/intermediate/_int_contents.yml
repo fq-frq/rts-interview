@@ -1,0 +1,37 @@
+version: 2
+models:
+  - name: int_contents
+    columns:
+      - name: content_id
+        description: A unique identifier for the content.
+        data_type: STRING
+      - name: content_title
+        description: The title of the content.
+        data_type: STRING
+      - name: content_title_pretty
+        description: A user-friendly title of the content.
+        data_type: STRING
+      - name: content_category_1
+        description: The primary category of the content.
+        data_type: STRING
+      - name: content_category_2
+        description: The secondary category of the content.
+        data_type: STRING
+      - name: content_category_3
+        description: The tertiary category of the content.
+        data_type: STRING
+      - name: content_category_4
+        description: The quaternary category of the content.
+        data_type: STRING
+      - name: content_page_type
+        description: The type of page displaying the content (e.g., 'video', 'article').
+        data_type: STRING
+      - name: content_page_elements
+        data_type: STRING
+      - name: content_publication_datetime
+        description: The date and time when the content was published.
+        data_type: STRING
+      - name: content_modification_datetime
+        data_type: TIMESTAMP
+      - name: content_publication_version
+        data_type: STRING

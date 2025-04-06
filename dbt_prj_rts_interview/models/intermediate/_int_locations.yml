@@ -1,6 +1,6 @@
 version: 2
 models:
-  - name: dim_locations
+  - name: int_locations
     columns:
       - name: location_id
         data_type: STRING

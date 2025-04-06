@@ -1,0 +1,11 @@
+version: 2
+models:
+  - name: int_languages
+    columns:
+      - name: language_id
+        data_type: STRING
+      - name: language
+        description: The language settings of the user's device.
+        data_type: STRING
+      - name: language_full_name
+        data_type: STRING

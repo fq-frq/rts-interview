@@ -44,7 +44,7 @@ enriched AS (
         content_page_type,
         content_page_elements,
         content_publication_datetime,
-        CAST( DATE_FROM_UNIX_DATE(CAST(start + (finish - start) * RAND() AS INT64)) as DATETIME ) as content_modification_datetime, --no data for this field so we generate it for the demo in order to analyze. In real, we need to get it from the business
+        CAST( DATE_FROM_UNIX_DATE(CAST(start + (finish - start) * RAND() AS INT64)) as TIMESTAMP ) as content_modification_datetime, --no data for this field so we generate it for the demo in order to analyze. In real, we need to get it from the business
         content_publication_version
     FROM cleaned,
     UNNEST([STRUCT(UNIX_DATE('2010-01-01') AS start, UNIX_DATE('2025-01-01') AS finish)])

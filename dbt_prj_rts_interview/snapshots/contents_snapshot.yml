@@ -1,0 +1,9 @@
+snapshots:
+  - name: contents_snapshot
+    relation: ref('dim_contents')
+    description: scd2 for dim_contents
+    config:
+      strategy: timestamp
+      unique_key: content_id
+      updated_at: content_modification_datetime
+      hard_deletes: invalidate

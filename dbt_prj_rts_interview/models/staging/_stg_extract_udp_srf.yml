@@ -2,298 +2,296 @@ version: 2
 models:
   - name: stg_extract_udp_srf
     columns:
-      - name: BUSINESS_UNIT
+      - name: business_unit
         description: The business unit responsible for the event (e.g., 'rts').
         data_type: STRING
-      - name: BACKEND_SYSTEM
+      - name: backend_system
         description: The backend system that processed the event (e.g., 'play').
         data_type: STRING
-      - name: PRODUCT
+      - name: product
         description: The product in which the event occurred (e.g., 'web').
         data_type: STRING
-      - name: TYPE
-        description: The type of event (e.g., 'page_view', 'video_start').
+      - name: event_type
         data_type: STRING
-      - name: COOKIE_ID
+      - name: cookie_id
         description: An identifier for the user's browser session (when available).
         data_type: STRING
-      - name: EVENT_ARRIVAL_DATE_CET
+      - name: event_arrival_date_cet
         description: The date the event was received in CET timezone.
         data_type: STRING
-      - name: EVENT_ARRIVAL_TIME_CET
+      - name: event_arrival_time_cet
         description: The exact timestamp when the event was received in CET timezone.
         data_type: TIMESTAMP
-      - name: SESSION_ID
+      - name: session_id
         description: A unique identifier for the user's session.
         data_type: STRING
-      - name: SESSION_RANK
+      - name: session_rank
         description: The order of the session in a user's event history.
         data_type: INT64
-      - name: FULL_ROW_MD5
+      - name: full_row_md5
         description: A hash representing the full row for data integrity checks.
         data_type: STRING
-      - name: ITEM_URN
+      - name: item_urn
         description: A unique resource name (URN) identifying a media item.
         data_type: STRING
-      - name: PAGE_URN
+      - name: page_urn
         description: URN of the page where the event occurred.
         data_type: STRING
-      - name: URL
+      - name: url
         description: The full URL of the page where the event took place.
         data_type: STRING
-      - name: ACTION_ELEMENT
+      - name: action_element
         description: The specific UI element interacted with (if applicable).
         data_type: STRING
-      - name: ACTION_LOCATION
+      - name: action_location
         description: The location on the page where the action took place.
         data_type: STRING
-      - name: ACTION_NAME
+      - name: action_name
         description: The name of the user action (e.g., 'play', 'pause').
         data_type: STRING
-      - name: ACTION_SOURCE
+      - name: action_source
         description: The source of the action (e.g., button, link).
         data_type: STRING
-      - name: ACTION_TYPE
+      - name: action_type
         description: The type of user action (e.g., 'click', 'scroll').
         data_type: STRING
-      - name: ACTION_VALUE
+      - name: action_value
         description: Additional value related to the action (e.g., video position).
         data_type: STRING
-      - name: CONTENT_CATEGORY_1
+      - name: content_category_1
         description: The primary category of the content.
         data_type: STRING
-      - name: CONTENT_CATEGORY_2
+      - name: content_category_2
         description: The secondary category of the content.
         data_type: STRING
-      - name: CONTENT_PAGE_TYPE
+      - name: content_page_type
         description: The type of page displaying the content (e.g., 'video', 'article').
         data_type: STRING
-      - name: CONTENT_PUBLICATION_DATETIME
+      - name: content_publication_datetime
         description: The date and time when the content was published.
         data_type: STRING
-      - name: CONTENT_TITLE_PRETTY
+      - name: content_title_pretty
         description: A user-friendly title of the content.
         data_type: STRING
-      - name: MEDIA_EMBEDDING_URL
+      - name: media_embedding_url
         description: The URL where the media was embedded (if applicable).
         data_type: STRING
-      - name: MEDIA_URL
+      - name: media_url
         description: Direct URL of the media file.
         data_type: STRING
-      - name: NAVIGATION_PATH_SRG_MOD_1
+      - name: navigation_path_srg_mod_1
         description: The first level of the navigation path in the site structure.
         data_type: STRING
-      - name: NAVIGATION_PATH_SRG_MOD_2
+      - name: navigation_path_srg_mod_2
         description: The second level of the navigation path in the site structure.
         data_type: STRING
-      - name: NAVIGATION_PATH_SRG_MOD_3
+      - name: navigation_path_srg_mod_3
         description: The third level of the navigation path in the site structure.
         data_type: STRING
-      - name: REFERRER
+      - name: referrer
         description: The URL of the referring page that led the user to this event.
         data_type: STRING
-      - name: USER_AGENT
+      - name: user_agent
         description: The user agent string of the device/browser.
         data_type: STRING
-      - name: ATOMIC_TS
+      - name: atomic_ts
         description: A timestamp used for atomic event processing.
         data_type: STRING
-      - name: CONTENT_CATEGORY_3
+      - name: content_category_3
         description: The tertiary category of the content.
         data_type: STRING
-      - name: CONTENT_CATEGORY_4
+      - name: content_category_4
         description: The quaternary category of the content.
         data_type: STRING
-      - name: SCHEMA_VERSION
+      - name: schema_version
         description: The version of the schema used for this data.
         data_type: STRING
-      - name: PLATFORM
+      - name: platform
         description: The platform on which the event occurred (e.g., 'desktop', 'mobile').
         data_type: STRING
-      - name: TIMESTAMP
-        description: A Unix timestamp representing the event occurrence.
+      - name: event_timestamp
         data_type: INT64
-      - name: SCREEN_RESOLUTION
+      - name: screen_resolution
         description: The screen resolution of the user's device.
         data_type: STRING
-      - name: VIEWPORT_SIZE
+      - name: viewport_size
         description: The size of the browser viewport.
         data_type: STRING
-      - name: SCREEN_ORIENTATION
+      - name: screen_orientation
         description: The screen orientation (e.g., 'portrait', 'landscape').
         data_type: STRING
-      - name: SCREEN_DENSITY
+      - name: screen_density
         description: The pixel density of the screen.
         data_type: STRING
-      - name: LANGUAGE
+      - name: language
         description: The language settings of the user's device.
         data_type: STRING
-      - name: AB_TEST_GROUP
+      - name: ab_test_group
         description: The A/B testing group the user is assigned to.
         data_type: STRING
-      - name: USER_ID
+      - name: user_id
         description: An anonymized identifier for the user.
         data_type: STRING
-      - name: PROFILE_ID
+      - name: profile_id
         description: An identifier for the user profile.
         data_type: STRING
-      - name: CLIENT_SESSION_ID
+      - name: client_session_id
         description: A session ID generated by the client application.
         data_type: STRING
-      - name: CLIENT_SESSION_TIMESTAMP
+      - name: client_session_timestamp
         data_type: STRING
-      - name: APPLICATION_TYPE
+      - name: application_type
         description: The type of application generating the event.
         data_type: STRING
-      - name: PAGE_ID
+      - name: page_id
         description: A unique identifier for the page.
         data_type: STRING
-      - name: PAGE_VERSION
+      - name: page_version
         data_type: STRING
-      - name: PAC_PAGE_ID
+      - name: pac_page_id
         data_type: STRING
-      - name: CONTENT_TITLE
+      - name: content_title
         description: The title of the content.
         data_type: STRING
-      - name: NAVIGATION_PATH_SRG_MOD_4
+      - name: navigation_path_srg_mod_4
         data_type: STRING
-      - name: NAVIGATION_LEVEL_1
+      - name: navigation_level_1
         description: The first level in the site's navigation structure.
         data_type: STRING
-      - name: NAVIGATION_LEVEL_2
+      - name: navigation_level_2
         description: The second level in the site's navigation structure.
         data_type: STRING
-      - name: NAVIGATION_LEVEL_3
+      - name: navigation_level_3
         description: The third level in the site's navigation structure.
         data_type: STRING
-      - name: NAVIGATION_LEVEL_4
+      - name: navigation_level_4
         description: The fourth level in the site's navigation structure.
         data_type: STRING
-      - name: CONTENT_ID
+      - name: content_id
         description: A unique identifier for the content.
         data_type: STRING
-      - name: CONTENT_PAGE_ELEMENTS
+      - name: content_page_elements
         data_type: STRING
-      - name: CONTENT_PUBLICATION_VERSION
+      - name: content_publication_version
         data_type: STRING
-      - name: CONTENT_MODIFICATION_DATETIME
+      - name: content_modification_datetime
         data_type: STRING
-      - name: DATEPICKER_SELECTED_DATE
+      - name: datepicker_selected_date
         data_type: STRING
-      - name: USER_SETTINGS
+      - name: user_settings
         data_type: STRING
-      - name: APP_VERSION
+      - name: app_version
         data_type: STRING
-      - name: APP_BUILD_ID
+      - name: app_build_id
         data_type: STRING
-      - name: DEVICE_ID
+      - name: device_id
         data_type: STRING
-      - name: DEVICE_TYPE
+      - name: device_type
         data_type: STRING
-      - name: DEVICE_MODEL_VERSION
+      - name: device_model_version
         data_type: STRING
-      - name: DEVICE_MANUFACTURER
+      - name: device_manufacturer
         data_type: STRING
-      - name: RUNTIME
+      - name: runtime
         data_type: STRING
-      - name: OS_VERSION
+      - name: os_version
         data_type: STRING
-      - name: _RESCUED_DATA
+      - name: rescued_data
         data_type: STRING
-      - name: EVENT_AVRO_PATH
+      - name: event_avro_path
         data_type: STRING
-      - name: VALIDATION_OUTPUT
+      - name: validation_output
         data_type: STRING
-      - name: VALIDATION_CODE
+      - name: validation_code
         data_type: STRING
-      - name: EVENT_ARRIVAL_TIME_UTC
+      - name: event_arrival_time_utc
         data_type: TIMESTAMP
-      - name: EVENT_ARRIVAL_DATE_UTC
+      - name: event_arrival_date_utc
         data_type: DATE
-      - name: COUNTRY_CODE
+      - name: country_code
         data_type: STRING
-      - name: REGION_CODE
+      - name: region_code
         data_type: STRING
-      - name: CITY
+      - name: city
         data_type: STRING
-      - name: MEDIA_SEGMENT_LENGTH
+      - name: media_segment_length
         description: The duration of the media segment being played.
         data_type: STRING
-      - name: MEDIA_EPISODE_LENGTH
+      - name: media_episode_length
         description: The total length of the media episode.
         data_type: STRING
-      - name: MEDIA_TIMESHIFT
+      - name: media_timeshift
         description: Indicates if the media was played in timeshift mode.
         data_type: STRING
-      - name: SHOW_NAME
+      - name: show_name
         description: The name of the TV show associated with the media.
         data_type: STRING
-      - name: EPISODE_NAME
+      - name: episode_name
         description: The name of the episode.
         data_type: STRING
-      - name: MEDIA_CHANNEL
+      - name: media_channel
         description: The media channel broadcasting the content.
         data_type: STRING
-      - name: MEDIA_IS_GEOBLOCKED
+      - name: media_is_geoblocked
         description: Indicates if the media is geographically restricted.
         data_type: STRING
-      - name: MEDIA_IS_LIVESTREAM
+      - name: media_is_livestream
         description: Indicates if the media is a live stream.
         data_type: STRING
-      - name: MEDIA_FULL_LENGTH
+      - name: media_full_length
         data_type: STRING
-      - name: MEDIA_VOLUME
+      - name: media_volume
         description: The volume level of the media playback.
         data_type: STRING
-      - name: MEDIA_MUTE
+      - name: media_mute
         description: Indicates if the media was muted.
         data_type: STRING
-      - name: MEDIA_EMBEDDING_CONTENT_PAGE_TYPE
+      - name: media_embedding_content_page_type
         data_type: STRING
-      - name: MEDIA_EMBEDDING_REFERRER
+      - name: media_embedding_referrer
         data_type: STRING
-      - name: MEDIA_EMBEDDING_ENVIRONMENT
+      - name: media_embedding_environment
         data_type: STRING
-      - name: MEDIA_LANGUAGE
+      - name: media_language
         data_type: STRING
-      - name: MEDIA_ASSIGNED_TAGS
+      - name: media_assigned_tags
         data_type: STRING
-      - name: MEDIA_IS_TVSVIZZERA
+      - name: media_is_tvsvizzera
         data_type: STRING
-      - name: MEDIA_SUBTITLES_ON
+      - name: media_subtitles_on
         data_type: STRING
-      - name: MEDIA_CAMERA_ANGLE_NAME
+      - name: media_camera_angle_name
         data_type: STRING
-      - name: MEDIA_PLAYER_VERSION
+      - name: media_player_version
         description: The version of the media player used.
         data_type: STRING
-      - name: MEDIA_QUALITY
+      - name: media_quality
         description: The quality of the media playback (e.g., 'HD', 'SD').
         data_type: STRING
-      - name: MEDIA_SEGMENT_ID
+      - name: media_segment_id
         description: An identifier for the media segment.
         data_type: STRING
-      - name: MEDIA_EPISODE_ID
+      - name: media_episode_id
         description: An identifier for the media episode.
         data_type: STRING
-      - name: MEDIA_SHOW_ID
+      - name: media_show_id
         description: An identifier for the TV show.
         data_type: STRING
-      - name: MEDIA_CHANNEL_ID
+      - name: media_channel_id
         data_type: STRING
-      - name: PLAYER_SIZE
+      - name: player_size
         description: The size of the media player on the screen.
         data_type: STRING
-      - name: MEDIA_THUMBNAIL
+      - name: media_thumbnail
         data_type: STRING
-      - name: MEDIA_SUB_SET_ID
+      - name: media_sub_set_id
         data_type: STRING
-      - name: MEDIA_TOPIC_LIST
+      - name: media_topic_list
         data_type: STRING
-      - name: SESSION_TIMEOUT_MONITOR
+      - name: session_timeout_monitor
         data_type: INT64
-      - name: SESSION_END
+      - name: session_end
         data_type: BOOLEAN
-      - name: IS_BOT
+      - name: is_bot
         description: Indicates if the user is a bot.
         data_type: BOOLEAN

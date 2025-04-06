@@ -1,0 +1,15 @@
+version: 2
+models:
+  - name: int_sessions
+    columns:
+      - name: session_id
+        description: A unique identifier for the user's session.
+        data_type: STRING
+      - name: session_start_time
+        data_type: TIMESTAMP
+      - name: session_end_time
+        data_type: TIMESTAMP
+      - name: session_duration_seconds
+        data_type: INT64
+      - name: total_events
+        data_type: INT64

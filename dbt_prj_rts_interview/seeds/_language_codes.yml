@@ -1,8 +1,12 @@
 version: 2
-
 seeds:
   - name: language_codes
     config:
       quote_columns: true
       column_types: {code: string, language: string}
-      delimiter: "," 
+      delimiter: ','
+    columns:
+      - name: code
+        data_type: STRING
+      - name: language
+        data_type: STRING

@@ -100,7 +100,7 @@ These additions showcase how dbt can be used not just for transformation but als
 Power BI was used in import mode to add `pbi_rts_interview.pbix` in the repository, allowing users to access dashboards without having to run the project from scratch.
 
 ### Relations
-Power BI automatically detected relationships based on foreign keys due to the clean star schema structure.
+Power BI automatically detected relationships based on foreign keys due to the clean star schema structure.  
 ![data model](images/data model.png)
 
 ### Key Insights & Visuals
